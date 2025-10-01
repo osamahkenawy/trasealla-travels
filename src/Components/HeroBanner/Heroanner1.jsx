@@ -8,7 +8,7 @@ const Heroanner1 = () => {
 
     // Memoize heroContent to update when locale changes
     const heroContent = useMemo(() => [
-        {img:'/assets/img/hero/01.jpg'},
+        {img:'/assets/img/trasealla-main.jpg'},
         {img:'/assets/img/hero/02.jpg'},
         {img:'/assets/img/hero/03.jpg'},
     ], []);

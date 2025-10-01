@@ -13,7 +13,7 @@ const HeroBanner2 = () => {
 
     return (
 <section className="hero-section-2" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-            <div className="hero-2 bg-cover" data-background="/assets/img/hero/hero2.jpg">
+            <div className="hero-2 bg-cover" data-background="/assets/img/travel-to-the-united-arab-emirates-abu-dhabi-2025-01-16-11-19-42-utc.jpg">
                 <div className="container custom-container-3">
                     <div className="row">
                         <div className="col-lg-6">
@@ -24,7 +24,7 @@ const HeroBanner2 = () => {
                                 <h1 className="wow fadeInUp" data-wow-delay=".3s">
                                     {t('hero2.title')}
                                 </h1>
-                                <p className="wow fadeInUp" data-wow-delay=".5s">
+                                <p className="wow fadeInUp font-weight-bold" data-wow-delay=".5s">
                                     {t('hero2.description')}
                                 </p>
                             </div>
