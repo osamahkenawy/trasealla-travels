@@ -142,6 +142,7 @@ export default function LanguageSwitcher() {
         .language-name {
           flex: 1;
           text-align: left;
+          color: #000;
         }
         
         .language-dropdown {
@@ -167,7 +168,7 @@ export default function LanguageSwitcher() {
           padding: 12px 16px;
           background: none;
           border: none;
-          border-bottom: 1px solid #f0f0f0;
+          border-bottom: 1px solidrgb(46, 46, 46);
           cursor: pointer;
           transition: background-color 0.2s ease;
           text-align: left;
