@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "homeVersion1": "Inicio Versión 1",
+    "homeVersion2": "Inicio Versión 2",
+    "homeVersion3": "Inicio Versión 3",
+    "aboutUs": "Sobre Nosotros",
+    "visaServices": "Servicios de Visa",
+    "destination": "Destinos",
+    "destinationDetails": "Detalles del Destino",
+    "tour": "Tours",
+    "tourDetails": "Detalles del Tour",
+    "pages": "Páginas",
+    "activities": "Actividades",
+    "activitiesDetails": "Detalles de Actividades",
+    "ourTeam": "Nuestro Equipo",
+    "teamDetails": "Detalles del Equipo",
+    "blog": "Blog",
+    "blogWithSidebar": "Blog con Barra Lateral",
+    "blogDetails": "Detalles del Blog",
+    "contact": "Contacto"
+  },
+  "header": {
+    "getVisaQuote": "Obtener Cotización de Visa",
+    "searchPlaceholder": "Buscar...",
+    "language": "Idioma"
+  },
+  "common": {
+    "readMore": "Leer Más",
+    "viewAll": "Ver Todo",
+    "bookNow": "Reservar Ahora",
+    "getQuote": "Obtener Cotización",
+    "exploreMore": "Explorar Más",
+    "discoverMore": "Descubrir Más",
+    "learnMore": "Aprender Más",
+    "search": "Buscar"
+  },
+  "hero": {
+    "subtitle": "Obtén placer inolvidable con nosotros",
+    "title": "Hagamos tu mejor viaje con nosotros",
+    "location": "Ubicación",
+    "activitiesType": "Tipo de Actividades",
+    "activateDay": "Día de Activación",
+    "traveler": "Viajero",
+    "featuredProjects": "Proyectos Destacados",
+    "luxuryHouses": "Casas de Lujo",
+    "satisfiedClients": "Clientes Satisfechos"
+  },
+  "footer": {
+    "aboutUs": "Sobre Nosotros",
+    "quickLinks": "Enlaces Rápidos",
+    "services": "Servicios",
+    "contactInfo": "Información de Contacto",
+    "followUs": "Síguenos",
+    "newsletter": "Boletín",
+    "subscribeNewsletter": "Suscríbete a nuestro boletín",
+    "enterEmail": "Ingresa tu correo electrónico",
+    "subscribe": "Suscribirse",
+    "allRightsReserved": "Todos los derechos reservados",
+    "privacyPolicy": "Política de Privacidad",
+    "termsConditions": "Términos y Condiciones"
+  },
+  "seo": {
+    "title": "Trasealla - Servicios de Viaje y Visa en EAU",
+    "description": "Tu socio confiable de viajes en EAU"
+  },
+  "whyChooseUs": {
+    "heading": "Tu viaje, gestionado de principio a fin",
+    "intro": "Trasealla es tu socio confiable de viajes y visas en los EAU. Nos especializamos en reservas de vuelos, servicios integrales de visa (EAU, Schengen, Reino Unido, EE.UU., Canadá), soluciones de residencia en EAU, consultoría de viajes educativos, rutas de inmigración a Brasil, Australia y Nueva Zelanda, además de tours especializados a Egipto, Marruecos y la región del Mar Negro.",
+    "supportNote": "Por qué elegirnos",
+    "badge": "ES / EN / AR",
+    "srText": "Trasealla ofrece visas, vuelos, hoteles, soporte de residencia, viajes educativos, inmigración y tours especializados.",
+    "items": [
+      {
+        "title": "Itinerarios personalizados",
+        "body": "Paquetes de viaje personalizados según tus preferencias, presupuesto y horario — vacaciones familiares, luna de miel romántica, viajes educativos o viajes de negocios. Cada viaje está cuidadosamente elaborado para tus necesidades únicas."
+      },
+      {
+        "title": "Experiencia en visas y residencia",
+        "body": "Asistencia completa para visas con listas de verificación detalladas, documentación precisa y orientación experta para visas de EAU, Golden Visa, permisos de residencia, Schengen, visas de estudio Reino Unido/EE.UU. e inmigración a Brasil, Australia y Nueva Zelanda. Aprobaciones rápidas con nuestro historial comprobado."
+      },
+      {
+        "title": "Mejor valor en reservas",
+        "body": "Tarifas competitivas de vuelos y hoteles a través de nuestros socios confiables. Precios transparentes con opciones flexibles de pago y ofertas exclusivas. Obtén más por tu dinero sin comprometer la calidad."
+      },
+      {
+        "title": "Soporte humano 24/7",
+        "body": "Personas reales disponibles en WhatsApp, teléfono y correo electrónico — antes, durante y después de tu viaje. Soporte fluido en español, inglés y árabe para tu conveniencia. Estamos aquí cuando nos necesites."
+      }
+    ]
+  }
+}

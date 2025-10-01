@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "homeVersion1": "Accueil Version 1",
+    "homeVersion2": "Accueil Version 2",
+    "homeVersion3": "Accueil Version 3",
+    "aboutUs": "À Propos",
+    "visaServices": "Services de Visa",
+    "destination": "Destinations",
+    "destinationDetails": "Détails de la Destination",
+    "tour": "Tours",
+    "tourDetails": "Détails du Tour",
+    "pages": "Pages",
+    "activities": "Activités",
+    "activitiesDetails": "Détails des Activités",
+    "ourTeam": "Notre Équipe",
+    "teamDetails": "Détails de l'Équipe",
+    "blog": "Blog",
+    "blogWithSidebar": "Blog avec Barre Latérale",
+    "blogDetails": "Détails du Blog",
+    "contact": "Contact"
+  },
+  "header": {
+    "getVisaQuote": "Obtenir un Devis de Visa",
+    "searchPlaceholder": "Rechercher...",
+    "language": "Langue"
+  },
+  "common": {
+    "readMore": "Lire Plus",
+    "viewAll": "Voir Tout",
+    "bookNow": "Réserver Maintenant",
+    "getQuote": "Obtenir un Devis",
+    "exploreMore": "Explorer Plus",
+    "discoverMore": "Découvrir Plus",
+    "learnMore": "En Savoir Plus",
+    "search": "Rechercher"
+  },
+  "hero": {
+    "subtitle": "Obtenez un plaisir inoubliable avec nous",
+    "title": "Faisons votre meilleur voyage avec nous",
+    "location": "Lieu",
+    "activitiesType": "Type d'Activités",
+    "activateDay": "Jour d'Activation",
+    "traveler": "Voyageur",
+    "featuredProjects": "Projets en Vedette",
+    "luxuryHouses": "Maisons de Luxe",
+    "satisfiedClients": "Clients Satisfaits"
+  },
+  "footer": {
+    "aboutUs": "À Propos",
+    "quickLinks": "Liens Rapides",
+    "services": "Services",
+    "contactInfo": "Informations de Contact",
+    "followUs": "Suivez-nous",
+    "newsletter": "Newsletter",
+    "subscribeNewsletter": "Abonnez-vous à notre newsletter",
+    "enterEmail": "Entrez votre email",
+    "subscribe": "S'abonner",
+    "allRightsReserved": "Tous droits réservés",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsConditions": "Termes et Conditions"
+  },
+  "seo": {
+    "title": "Trasealla - Services de Voyage et Visa aux EAU",
+    "description": "Votre partenaire de voyage de confiance aux EAU"
+  },
+  "whyChooseUs": {
+    "heading": "Votre voyage, géré de bout en bout",
+    "intro": "Trasealla est votre partenaire de voyage et de visa de confiance aux EAU. Nous nous spécialisons dans les réservations de vols, les services de visa complets (EAU, Schengen, Royaume-Uni, États-Unis, Canada), les solutions de résidence aux EAU, le conseil en voyages éducatifs, les voies d'immigration vers le Brésil, l'Australie et la Nouvelle-Zélande, ainsi que des circuits organisés en Égypte, au Maroc et dans la région de la mer Noire.",
+    "supportNote": "Pourquoi nous choisir",
+    "badge": "FR / EN / AR",
+    "srText": "Trasealla propose des visas, des vols, des hôtels, un soutien à la résidence, des voyages éducatifs, l'immigration et des circuits organisés.",
+    "items": [
+      {
+        "title": "Itinéraires sur mesure",
+        "body": "Forfaits de voyage personnalisés selon vos préférences, votre budget et votre emploi du temps — vacances en famille, lune de miel romantique, voyages éducatifs ou voyages d'affaires. Chaque voyage est soigneusement élaboré pour vos besoins uniques."
+      },
+      {
+        "title": "Expertise visa et résidence",
+        "body": "Assistance visa complète avec listes de contrôle détaillées, documentation précise et conseils d'experts pour les visas EAU, Golden Visa, permis de résidence, Schengen, visas d'études Royaume-Uni/États-Unis et immigration vers le Brésil, l'Australie et la Nouvelle-Zélande. Approbations rapides avec notre expérience éprouvée."
+      },
+      {
+        "title": "Meilleur rapport qualité-prix",
+        "body": "Tarifs compétitifs pour les vols et les hôtels grâce à nos partenaires de confiance. Prix transparents avec options de paiement flexibles et offres exclusives. Obtenez plus pour votre argent sans compromettre la qualité."
+      },
+      {
+        "title": "Support humain 24/7",
+        "body": "De vraies personnes disponibles sur WhatsApp, par téléphone et e-mail — avant, pendant et après votre voyage. Support en français, anglais et arabe pour votre confort. Nous sommes là quand vous en avez besoin."
+      }
+    ]
+  }
+}

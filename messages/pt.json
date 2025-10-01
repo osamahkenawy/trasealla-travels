@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Início",
+    "homeVersion1": "Início Versão 1",
+    "homeVersion2": "Início Versão 2",
+    "homeVersion3": "Início Versão 3",
+    "aboutUs": "Sobre Nós",
+    "visaServices": "Serviços de Visto",
+    "destination": "Destinos",
+    "destinationDetails": "Detalhes do Destino",
+    "tour": "Tours",
+    "tourDetails": "Detalhes do Tour",
+    "pages": "Páginas",
+    "activities": "Atividades",
+    "activitiesDetails": "Detalhes das Atividades",
+    "ourTeam": "Nossa Equipe",
+    "teamDetails": "Detalhes da Equipe",
+    "blog": "Blog",
+    "blogWithSidebar": "Blog com Barra Lateral",
+    "blogDetails": "Detalhes do Blog",
+    "contact": "Contato"
+  },
+  "header": {
+    "getVisaQuote": "Obter Cotação de Visto",
+    "searchPlaceholder": "Pesquisar...",
+    "language": "Idioma"
+  },
+  "common": {
+    "readMore": "Leia Mais",
+    "viewAll": "Ver Tudo",
+    "bookNow": "Reservar Agora",
+    "getQuote": "Obter Cotação",
+    "exploreMore": "Explorar Mais",
+    "discoverMore": "Descobrir Mais",
+    "learnMore": "Saiba Mais",
+    "search": "Pesquisar"
+  },
+  "hero": {
+    "subtitle": "Obtenha prazer inesquecível conosco",
+    "title": "Vamos fazer sua melhor viagem conosco",
+    "location": "Localização",
+    "activitiesType": "Tipo de Atividades",
+    "activateDay": "Dia de Ativação",
+    "traveler": "Viajante",
+    "featuredProjects": "Projetos em Destaque",
+    "luxuryHouses": "Casas de Luxo",
+    "satisfiedClients": "Clientes Satisfeitos"
+  },
+  "footer": {
+    "aboutUs": "Sobre Nós",
+    "quickLinks": "Links Rápidos",
+    "services": "Serviços",
+    "contactInfo": "Informações de Contato",
+    "followUs": "Siga-nos",
+    "newsletter": "Newsletter",
+    "subscribeNewsletter": "Assine nossa newsletter",
+    "enterEmail": "Digite seu e-mail",
+    "subscribe": "Assinar",
+    "allRightsReserved": "Todos os direitos reservados",
+    "privacyPolicy": "Política de Privacidade",
+    "termsConditions": "Termos e Condições"
+  },
+  "seo": {
+    "title": "Trasealla - Serviços de Viagem e Visto nos EAU",
+    "description": "Seu parceiro confiável de viagens nos EAU"
+  },
+  "whyChooseUs": {
+    "heading": "Sua viagem, gerenciada de ponta a ponta",
+    "intro": "Trasealla é seu parceiro confiável de viagens e vistos nos EAU. Especializamo-nos em reservas de voos, serviços abrangentes de visto (EAU, Schengen, Reino Unido, EUA, Canadá), soluções de residência nos EAU, consultoria de viagens educacionais, caminhos de imigração para Brasil, Austrália e Nova Zelândia, além de tours especializados para Egito, Marrocos e região do Mar Negro.",
+    "supportNote": "Por que nos escolher",
+    "badge": "PT / EN / AR",
+    "srText": "Trasealla oferece vistos, voos, hotéis, suporte de residência, viagens educacionais, imigração e tours especializados.",
+    "items": [
+      {
+        "title": "Itinerários personalizados",
+        "body": "Pacotes de viagem personalizados de acordo com suas preferências, orçamento e agenda — férias em família, lua de mel romântica, viagens educacionais ou viagens de negócios. Cada jornada é cuidadosamente elaborada para suas necessidades únicas."
+      },
+      {
+        "title": "Expertise em vistos e residência",
+        "body": "Assistência completa para vistos com checklists detalhados, documentação precisa e orientação especializada para vistos dos EAU, Golden Visa, permissões de residência, Schengen, vistos de estudo Reino Unido/EUA e imigração para Brasil, Austrália e Nova Zelândia. Aprovações rápidas com nosso histórico comprovado."
+      },
+      {
+        "title": "Melhor valor em reservas",
+        "body": "Tarifas competitivas de voos e hotéis através de nossos parceiros confiáveis. Preços transparentes com opções flexíveis de pagamento e ofertas exclusivas. Obtenha mais pelo seu dinheiro sem comprometer a qualidade."
+      },
+      {
+        "title": "Suporte humano 24/7",
+        "body": "Pessoas reais disponíveis no WhatsApp, telefone e e-mail — antes, durante e após sua viagem. Suporte fluente em português, inglês e árabe para sua conveniência. Estamos aqui quando você precisar."
+      }
+    ]
+  }
+}

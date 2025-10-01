@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Home",
+    "homeVersion1": "Home Bersyon 1",
+    "homeVersion2": "Home Bersyon 2",
+    "homeVersion3": "Home Bersyon 3",
+    "aboutUs": "Tungkol Sa Amin",
+    "visaServices": "Serbisyo ng Visa",
+    "destination": "Destinasyon",
+    "destinationDetails": "Detalye ng Destinasyon",
+    "tour": "Tour",
+    "tourDetails": "Detalye ng Tour",
+    "pages": "Mga Pahina",
+    "activities": "Mga Aktibidad",
+    "activitiesDetails": "Detalye ng Aktibidad",
+    "ourTeam": "Ang Aming Koponan",
+    "teamDetails": "Detalye ng Koponan",
+    "blog": "Blog",
+    "blogWithSidebar": "Blog na May Sidebar",
+    "blogDetails": "Detalye ng Blog",
+    "contact": "Makipag-ugnayan"
+  },
+  "header": {
+    "getVisaQuote": "Kumuha ng Quotation ng Visa",
+    "searchPlaceholder": "Maghanap...",
+    "language": "Wika"
+  },
+  "common": {
+    "readMore": "Magbasa Pa",
+    "viewAll": "Tingnan Lahat",
+    "bookNow": "Mag-book Ngayon",
+    "getQuote": "Kumuha ng Quotation",
+    "exploreMore": "Tuklasin Pa",
+    "discoverMore": "Alamin Pa",
+    "learnMore": "Matuto Pa",
+    "search": "Maghanap"
+  },
+  "hero": {
+    "subtitle": "Makakuha ng hindi malilimutang kasiyahan sa amin",
+    "title": "Gawing pinakamagandang biyahe mo kasama namin",
+    "location": "Lokasyon",
+    "activitiesType": "Uri ng Aktibidad",
+    "activateDay": "Araw ng Aktibasyson",
+    "traveler": "Manlalakbay",
+    "featuredProjects": "Mga Pangunahing Proyekto",
+    "luxuryHouses": "Mga Luxury na Bahay",
+    "satisfiedClients": "Mga Nasiyahang Kliyente"
+  },
+  "footer": {
+    "aboutUs": "Tungkol Sa Amin",
+    "quickLinks": "Mabilis na Mga Link",
+    "services": "Mga Serbisyo",
+    "contactInfo": "Impormasyon sa Pakikipag-ugnayan",
+    "followUs": "Sundan Kami",
+    "newsletter": "Newsletter",
+    "subscribeNewsletter": "Mag-subscribe sa aming newsletter",
+    "enterEmail": "Ilagay ang iyong email",
+    "subscribe": "Mag-subscribe",
+    "allRightsReserved": "Lahat ng karapatan ay nakalaan",
+    "privacyPolicy": "Patakaran sa Privacy",
+    "termsConditions": "Mga Tuntunin at Kundisyon"
+  },
+  "seo": {
+    "title": "Trasealla - Serbisyo sa Paglalakbay at Visa sa UAE",
+    "description": "Ang iyong pinagkakatiwalaang kasosyo sa paglalakbay sa UAE"
+  },
+  "whyChooseUs": {
+    "heading": "Ang iyong paglalakbay, pinamamahalaan mula simula hanggang dulo",
+    "intro": "Ang Trasealla ay iyong pinagkakatiwalaang kasosyo sa paglalakbay at visa sa UAE. Kami ay espesyalista sa booking ng flight, komprehensibong serbisyo ng visa (UAE, Schengen, UK, US, Canada), solusyon sa paninirahan sa UAE, konsultasyon sa paglalakbay sa edukasyon, landas ng immigration sa Brazil, Australia, at New Zealand, kasama ang mga dalubhasang tour sa Egypt, Morocco, at rehiyon ng Black Sea.",
+    "supportNote": "Bakit pipiliin kami",
+    "badge": "TL / EN / AR",
+    "srText": "Ang Trasealla ay nag-aalok ng visa, flight, hotel, suporta sa paninirahan, paglalakbay sa edukasyon, immigration, at mga dalubhasang tour.",
+    "items": [
+      {
+        "title": "Mga customized na itinerary",
+        "body": "Mga pakete ng paglalakbay na dinisenyo ayon sa iyong mga kagustuhan, badyet, at iskedyul — family vacation, romantic honeymoon, educational trips, o business travel. Bawat paglalakbay ay maingat na ginawa para sa iyong natatanging pangangailangan."
+      },
+      {
+        "title": "Dalubhasa sa visa at paninirahan",
+        "body": "Kumpletong tulong sa visa na may detalyadong checklist, tumpak na dokumentasyon, at dalubhasang gabay para sa UAE visa, Golden Visa, permit sa paninirahan, Schengen, UK/US study visa, at immigration sa Brazil, Australia, at New Zealand. Mabilis na pag-apruba sa aming napatunayang track record."
+      },
+      {
+        "title": "Pinakamahusay na halaga sa booking",
+        "body": "Mapagkumpitensyang presyo ng flight at hotel sa pamamagitan ng aming pinagkakatiwalaang kasosyo. Transparent na presyo na may flexible na opsyon sa pagbabayad at eksklusibong alok. Makakuha ng higit pa sa iyong pera nang walang kompromiso sa kalidad."
+      },
+      {
+        "title": "24/7 suporta ng tao",
+        "body": "Tunay na tao na available sa WhatsApp, telepono, at email — bago, habang, at pagkatapos ng iyong paglalakbay. Dalubhasang suporta sa Tagalog, Ingles, at Arabic para sa iyong kaginhawahan. Nandito kami kapag kailangan mo."
+      }
+    ]
+  }
+}

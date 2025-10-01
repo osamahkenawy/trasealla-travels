@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Outlet } from "react-router";
 import Home from "../Pages/Home";
 import Main from "../Layout/Main";
 import AboutPage from "../Pages/AboutPage";
@@ -18,91 +18,162 @@ import ContactPage from "../Pages/ContactPage";
 import BlogGrid from "../Pages/BlogGrid";
 import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import BlogSidebarPage from "../Pages/BlogSidebarPage";
+import { LanguageProvider } from "../contexts/LanguageContext";
+
+// Wrapper component to provide language context
+function LanguageWrapper() {
+  return (
+    <LanguageProvider>
+      <Outlet />
+    </LanguageProvider>
+  );
+}
+
+// Define all page routes
+const pageRoutes = [
+  {
+    path: "",
+    Component: Main,
+    children: [
+      {
+        index: true,
+        Component: Home3,
+      },
+    ],
+  },
+  {
+    path: "about",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: AboutPage,
+      },
+    ],
+  },
+  {
+    path: "destination",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: DestinationPage,
+      },
+      {
+        path: "destination-details",
+        Component: DestinationDetailsPage,
+      },
+    ],
+  },
+  {
+    path: "tour",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: TourPage,
+      },
+      {
+        path: "tour-details",
+        Component: TourDetailsPage,
+      },
+    ],
+  },
+  {
+    path: "activities",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: ActivitiesPage,
+      },
+      {
+        path: "activities-details",
+        Component: ActivitiesDetailsPage,
+      },
+    ],
+  },
+  {
+    path: "team",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: TeamPage,
+      },
+      {
+        path: "team-details",
+        Component: TeamDetailsPage,
+      },
+    ],
+  },
+  {
+    path: "contact",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: ContactPage,
+      },
+    ],
+  },
+  {
+    path: "blog",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: BlogGrid,
+      },
+      {
+        path: "blog-details",
+        Component: BlogDetailsPage,
+      },
+    ],
+  },
+  {
+    path: "blog-sidebar",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: BlogSidebarPage,
+      },
+    ],
+  },
+  {
+    path: "home2",
+    Component: Layout3,
+    children: [
+      {
+        index: true,
+        Component: Home2,
+      },
+    ],
+  },
+  {
+    path: "home1",
+    Component: Layout2,
+    children: [
+      {
+        index: true,
+        Component: Home,
+      },
+    ],
+  },
+];
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      Component: Main,
-      children: [
-        {
-          index: true,
-          Component: Home3,
-        },                           
-      ],
-    },
-    {
-      path: "/",
-      Component: Layout3,
-      children: [                      
-        {
-            path: "/home2",
-            Component: Home2
-        },  
-        {
-          path: "/about",
-          Component: AboutPage
-        },
-        {
-          path: "/destination",
-          Component: DestinationPage
-        },          
-        {
-          path: "/destination/destination-details",
-          Component: DestinationDetailsPage
-        },        
-        {
-          path: "/tour",
-          Component: TourPage
-        },
-        {
-          path: "/tour/tour-details",
-          Component: TourDetailsPage
-        },
-        {
-          path: "/activities",
-          Component: ActivitiesPage
-        },
-        {
-          path: "/activities/activities-details",
-          Component: ActivitiesDetailsPage
-        },
-        {
-          path: "/team",
-          Component: TeamPage
-        },
-        {
-          path: "/team/team-details",
-          Component: TeamDetailsPage
-        },
-        {
-          path: "/contact",
-          Component: ContactPage
-        },
-        {
-          path: "/blog",
-          Component: BlogGrid
-        },
-        {
-          path: "/blog-sidebar",
-          Component: BlogSidebarPage
-        },        
-        {
-          path: "/blog/blog-details",
-          Component: BlogDetailsPage
-        },
-
-
-      ],
-    },
-    {
-      path: '/home1',
-      Component: Layout2,
-      children: [
-        {
-          index: true,
-          Component: Home,
-        },                           
-      ],
-    },      
-
-  ]);
+  // English routes (default, no prefix)
+  {
+    path: "/",
+    Component: LanguageWrapper,
+    children: pageRoutes,
+  },
+  // Localized routes (with locale prefix)
+  {
+    path: "/:locale",
+    Component: LanguageWrapper,
+    children: pageRoutes,
+  },
+]);

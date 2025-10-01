@@ -1,5 +1,6 @@
 import React from 'react';
 import Heroanner1 from '../Components/HeroBanner/Heroanner1';
+import HeroBanner2 from '../Components/HeroBanner/HeroBanner2';
 import Feature1 from '../Components/Feature/Feature1';
 import Category1 from '../Components/Category/Category1';
 import About1 from '../Components/About/About1';
@@ -12,11 +13,15 @@ import Team1 from '../Components/Team/Team1';
 import Cta2 from '../Components/Cta/Cta2';
 import Blog1 from '../Components/Blog/Blog1';
 import Brand1 from '../Components/Brand/Brand1';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home3 = () => {
+    const { locale } = useLanguage();
+    
     return (
         <div>
-            <Heroanner1></Heroanner1>
+            {/* Show HeroBanner2 for Arabic, Heroanner1 for other languages */}
+            {locale === 'ar' ? <HeroBanner2 /> : <Heroanner1 />}
             <Feature1></Feature1>
             <Category1></Category1>
             <About1></About1>

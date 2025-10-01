@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "homeVersion1": "Home Version 1",
+    "homeVersion2": "Home Version 2", 
+    "homeVersion3": "Home Version 3",
+    "aboutUs": "About Us",
+    "visaServices": "Visa Services",
+    "destination": "Destination",
+    "destinationDetails": "Destination Details",
+    "tour": "Tour",
+    "tourDetails": "Tour Details",
+    "pages": "Pages",
+    "activities": "Activities",
+    "activitiesDetails": "Activities Details",
+    "ourTeam": "Our Team",
+    "teamDetails": "Team Details",
+    "blog": "Blog",
+    "blogWithSidebar": "Blog With Sidebar",
+    "blogDetails": "Blog Details",
+    "contact": "Contact"
+  },
+  "header": {
+    "getVisaQuote": "Get Visa Quote",
+    "searchPlaceholder": "Search...",
+    "language": "Language"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "bookNow": "Book Now",
+    "getQuote": "Get Quote",
+    "exploreMore": "Explore More",
+    "discoverMore": "Discover More",
+    "learnMore": "Learn More",
+    "search": "Search"
+  },
+  "hero": {
+    "subtitle": "Get unforgettable pleasure with us",
+    "title": "Let's make your best trip with us",
+    "location": "Location",
+    "activitiesType": "Activities Type",
+    "activateDay": "Activate Day",
+    "traveler": "Traveler",
+    "featuredProjects": "Featured Projects",
+    "luxuryHouses": "Luxury Houses",
+    "satisfiedClients": "Satisfied Clients"
+  },
+  "hero2": {
+    "subtitle": "Get unforgettable pleasure with us",
+    "title": "Discover Your Next Handpicked Journey",
+    "description": "There are many variations of passages available, but the majority have suffered alteration in some form, by injected humour words which don't look even slightly believable.",
+    "findBestPlace": "Find The Best Place",
+    "hotels": "Hotels",
+    "tour": "Tour",
+    "flight": "Flight",
+    "lookingFor": "Looking For",
+    "tourName": "Tour Name",
+    "price": "Price",
+    "allCity": "All City",
+    "departureMonth": "Departure Month"
+  },
+  "footer": {
+    "aboutUs": "About Us",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "subscribeNewsletter": "Subscribe to our newsletter",
+    "enterEmail": "Enter your email",
+    "subscribe": "Subscribe",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions"
+  },
+  "seo": {
+    "title": "Turmet - Travel & Tour Agency NextJS Template",
+    "description": "Turmet - Travel & Tour Agency NextJS Template"
+  },
+  "whyChooseUs": {
+    "heading": "Your Journey, Handled End-to-End",
+    "intro": "Trasealla is your trusted UAE-based travel and visa partner. We specialize in seamless flight bookings, comprehensive visa services (UAE, Schengen, UK, US, Canada), UAE residency solutions, educational travel consulting, immigration pathways to Brazil, Australia, and New Zealand, plus expertly curated tours to Egypt, Morocco, and the stunning Black Sea region. One partner for all your travel needs.",
+    "supportNote": "Why Choose Us",
+    "badge": "EN / AR",
+    "srText": "Trasealla offers visas, flights, hotels, residency support, study travel, immigration, and curated tours.",
+    "items": [
+      {
+        "title": "Tailor-Made Itineraries",
+        "body": "Customized travel packages designed around your preferences, budget, and schedule—whether it's family vacations, romantic honeymoons, educational trips, or business travel. Every journey is crafted with your unique needs in mind."
+      },
+      {
+        "title": "Visa & Residency Expertise",
+        "body": "Complete visa assistance with detailed checklists, accurate documentation, and expert guidance for UAE visas, Golden Visa, residency permits, Schengen, UK/US study visas, and immigration to Brazil, Australia, and New Zealand. Hassle-free approvals with our proven track record."
+      },
+      {
+        "title": "Best Value Booking",
+        "body": "Competitive flight fares and hotel rates through our trusted airline and destination management partners. Transparent pricing with flexible payment options and exclusive deals. Get more for your money without compromising on quality."
+      },
+      {
+        "title": "24/7 Human Support",
+        "body": "Real people available on WhatsApp, phone, and email—before, during, and after your trip. Fluent support in English, Arabic, and multiple languages for your convenience. We're here whenever you need us."
+      }
+    ]
+  }
+}

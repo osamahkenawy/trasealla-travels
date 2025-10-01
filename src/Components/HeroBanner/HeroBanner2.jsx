@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import loadBackgroudImages from '../Common/loadBackgroudImages';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const HeroBanner2 = () => {
+        const { t, locale } = useLanguage();
 
         useEffect(() => {
             loadBackgroudImages();
@@ -10,21 +12,20 @@ const HeroBanner2 = () => {
         const [isActive, setIsActive] = useState('tour');
 
     return (
-<section className="hero-section-2">
+<section className="hero-section-2" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
             <div className="hero-2 bg-cover" data-background="/assets/img/hero/hero2.jpg">
                 <div className="container custom-container-3">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="hero-content">
                                 <div className="sub-title wow fadeInUp">
-                                    Get unforgettable pleasure with us
+                                    {t('hero2.subtitle')}
                                 </div>
                                 <h1 className="wow fadeInUp" data-wow-delay=".3s">
-                                    Discover Your Next <br/>
-                                     Handpicked Journey
+                                    {t('hero2.title')}
                                 </h1>
                                 <p className="wow fadeInUp" data-wow-delay=".5s">
-                                    There are many variations of passages of  available, but the majority have suffered alteration in <br/> some form, by injected humour words which don't look even slightly believable.
+                                    {t('hero2.description')}
                                 </p>
                             </div>
                         </div>
@@ -37,22 +38,22 @@ const HeroBanner2 = () => {
                         <div className="row">
                             <div className="best-price-wrapper">
                                 <div className="content wow fadeInUp" data-wow-delay=".3s">
-                                    <h2>Find The Best Place</h2>
+                                    <h2>{t('hero2.findBestPlace')}</h2>
                                 </div>
                                 <ul className="nav">
                                     <li className={`nav-item wow fadeInUp ${isActive === 'hotel' ? 'active' : ''}`} onClick={() => setIsActive('hotel')} data-wow-delay=".3s">
                                         <a className="nav-link"  data-bs-toggle="tab">
-                                            Hotels
+                                            {t('hero2.hotels')}
                                         </a>
                                     </li>
                                     <li className={`nav-item wow fadeInUp ${isActive === 'tour' ? 'active' : ''}`} onClick={() => setIsActive('tour')}  data-wow-delay=".5s">
                                         <a href="#thumb2" data-bs-toggle="tab" className="nav-link">
-                                            Tour
+                                            {t('hero2.tour')}
                                         </a>
                                     </li>
                                     <li className={`nav-item wow fadeInUp ${isActive === 'flight' ? 'active' : ''}`} onClick={() => setIsActive('flight')}  data-wow-delay=".7s">
                                         <a href="#thumb3" data-bs-toggle="tab" className="nav-link">
-                                            Flight
+                                            {t('hero2.flight')}
                                         </a>
                                     </li>
                                 </ul>
@@ -64,8 +65,8 @@ const HeroBanner2 = () => {
                                             <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-5">
                                                 <div className="col">
                                                     <div className="form-clt">
-                                                        <span>Looking For</span>
-                                                        <input type="text" name="name" id="name21" placeholder="Tour Name" />
+                                                        <span>{t('hero2.lookingFor')}</span>
+                                                        <input type="text" name="name" id="name21" placeholder={t('hero2.tourName')} />
                                                     </div>
                                                 </div>
                                                 <div className="col">
@@ -98,7 +99,7 @@ const HeroBanner2 = () => {
                                                 </div>
                                                 <div className="col">
                                                     <div className="form-clt">
-                                                        <span>Departure Month</span>
+                                                        <span>{t('hero2.departureMonth')}</span>
                                                         <div className="form-clt">
                                                             <input type="date" id="date1" name="date1" />
                                                         </div>
@@ -106,9 +107,9 @@ const HeroBanner2 = () => {
                                                 </div>
                                                 <div className="col">
                                                     <div className="form-clt">
-                                                        <span>Departure Month</span>
+                                                        <span>{t('hero2.departureMonth')}</span>
                                                         <button type="submit" className="theme-btn w-100">
-                                                            Search
+                                                            {t('common.search')}
                                                             <i className="fa-solid fa-magnifying-glass"></i>
                                                         </button>
                                                     </div>

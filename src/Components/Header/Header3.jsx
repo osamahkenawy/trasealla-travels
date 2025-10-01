@@ -1,11 +1,23 @@
 import { useEffect, useState } from 'react';
 import { Link } from "react-router";
 import Nav from './Nav';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../../contexts/LanguageContext';
+
 export default function Header3({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
   const [isSticky, setIsSticky] = useState();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [searchToggle, setSearchToggle] = useState(false);
+  const { locale } = useLanguage();
+  
+  // Helper function to create localized paths
+  const getLocalizedPath = (path) => {
+    if (locale === 'en') {
+      return path;
+    }
+    return `/${locale}${path}`;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,10 +46,8 @@ export default function Header3({ variant }) {
         variant ? variant : ''
       } cs_sticky_header cs_site_header_full_width ${
         mobileToggle ? 'cs_mobile_toggle_active' : ''
-      } ${isSticky ? isSticky : ''}`}
-    >
-
-<div className="cs_top_header">
+      } ${isSticky ? isSticky : ''}`}>
+      <div className="cs_top_header">
         <div className="container">
           <div className="cs_top_header_in">
             <div className="cs_top_header_left header-info">
@@ -84,7 +94,7 @@ export default function Header3({ variant }) {
         <div className="container">
           <div className="cs_main_header_in">
             <div className="cs_main_header_left">
-            <Link className="cs_site_branding" to="/">
+            <Link className="cs_site_branding" to={getLocalizedPath('/')}>
                 <img src="/assets/img/logo/black-logo.svg" alt="Logo" />
               </Link>
               </div>
@@ -106,8 +116,9 @@ export default function Header3({ variant }) {
             <div className="cs_main_header_right">
               <div className="header-btn d-flex align-items-center">
                 <div className="main-button">
-                <a onClick={() => setSearchToggle(!searchToggle)} className="search-trigger search-icon"><i className="bi bi-search"></i></a>
-                <Link to="/contact" className='theme-btn'>
+                {/* <a onClick={() => setSearchToggle(!searchToggle)} className="search-trigger search-icon"><i className="bi bi-search"></i></a> */}
+                <LanguageSwitcher />
+                <Link to={getLocalizedPath('/contact')} className='theme-btn'>
                 <span> Request A Quote <i className="bi bi-arrow-right"></i> </span></Link>
                   </div>
 
@@ -119,7 +130,7 @@ export default function Header3({ variant }) {
     </header>
     <div className="cs_site_header_spacing_140"></div>
 
-    <div className={`search-wrap ${searchToggle ? 'active' : ''}`}>
+        <div className={`search-wrap ${searchToggle ? 'active' : ''}`}>
             <div className="search-inner">
             <i onClick={() => setSearchToggle(!searchToggle)} id="search-close" className="bi bi-x-lg search-close"></i>
                 <div className="search-cell">
@@ -131,8 +142,6 @@ export default function Header3({ variant }) {
                 </div>
             </div>
         </div>
-
     </div>
-
   );
 }

@@ -1,26 +1,37 @@
 import DropDown from './DropDown';
 import { Link } from "react-router";
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Nav({ setMobileToggle }) {
+  const { locale, t } = useLanguage();
+  
+  // Helper function to create localized paths
+  const getLocalizedPath = (path) => {
+    if (locale === 'en') {
+      return path;
+    }
+    return `/${locale}${path}`;
+  };
+
   return (
     <ul className="cs_nav_list fw-medium">
       <li className="menu-item-has-children">
-        <Link to="/">Home</Link>
+        <Link to={getLocalizedPath('/')}>{t('nav.home')}</Link>
         <DropDown>
           <ul>
             <li>
-              <Link to="/" onClick={() => setMobileToggle(false)}>
-              Home Version 1
+              <Link to={getLocalizedPath('/home1')} onClick={() => setMobileToggle(false)}>
+                {t('nav.homeVersion1')}
               </Link>
             </li>
             <li>
-              <Link to="/home2" onClick={() => setMobileToggle(false)}>
-              Home Version 2
+              <Link to={getLocalizedPath('/home2')} onClick={() => setMobileToggle(false)}>
+                {t('nav.homeVersion2')}
               </Link>
             </li>
             <li>
-              <Link to="/home3" onClick={() => setMobileToggle(false)}>
-                Home Version 3
+              <Link to={getLocalizedPath('/')} onClick={() => setMobileToggle(false)}>
+                {t('nav.homeVersion3')}
               </Link>
             </li>            
           </ul>
@@ -28,25 +39,25 @@ export default function Nav({ setMobileToggle }) {
       </li>
 
       <li>
-        <Link to="/about" onClick={() => setMobileToggle(false)}>
-        About Us
+        <Link to={getLocalizedPath('/about')} onClick={() => setMobileToggle(false)}>
+          {t('nav.aboutUs')}
         </Link>
       </li>
 
       <li className="menu-item-has-children">
-        <Link to="/destination" onClick={() => setMobileToggle(false)}>
-        Destination
+        <Link to={getLocalizedPath('/destination')} onClick={() => setMobileToggle(false)}>
+          {t('nav.destination')}
         </Link>
         <DropDown>
           <ul>
             <li>
-              <Link to="/destination" onClick={() => setMobileToggle(false)}>
-              Destination
+              <Link to={getLocalizedPath('/destination')} onClick={() => setMobileToggle(false)}>
+                {t('nav.destination')}
               </Link>
             </li>
             <li>
-              <Link to="/destination/destination-details" onClick={() => setMobileToggle(false)}>
-              Destination Details
+              <Link to={getLocalizedPath('/destination/destination-details')} onClick={() => setMobileToggle(false)}>
+                {t('nav.destinationDetails')}
               </Link>
             </li>
           </ul>
@@ -54,19 +65,19 @@ export default function Nav({ setMobileToggle }) {
       </li>
 
       <li className="menu-item-has-children">
-        <Link to="/tour" onClick={() => setMobileToggle(false)}>
-        Tour
+        <Link to={getLocalizedPath('/tour')} onClick={() => setMobileToggle(false)}>
+          {t('nav.tour')}
         </Link>
         <DropDown>
           <ul>
             <li>
-              <Link to="/tour" onClick={() => setMobileToggle(false)}>
-              Tour
+              <Link to={getLocalizedPath('/tour')} onClick={() => setMobileToggle(false)}>
+                {t('nav.tour')}
               </Link>
             </li>          
             <li>
-              <Link to="/tour/tour-details" onClick={() => setMobileToggle(false)}>
-              Tour Details
+              <Link to={getLocalizedPath('/tour/tour-details')} onClick={() => setMobileToggle(false)}>
+                {t('nav.tourDetails')}
               </Link>
             </li>
           </ul>
@@ -74,32 +85,32 @@ export default function Nav({ setMobileToggle }) {
       </li> 
       
       <li className="menu-item-has-children">
-        <Link to="#">Pages</Link>
+        <Link to="#">{t('nav.pages')}</Link>
         <DropDown>
           <ul>
             <li>
-              <Link to="/activities" onClick={() => setMobileToggle(false)}>
-              Activities
+              <Link to={getLocalizedPath('/activities')} onClick={() => setMobileToggle(false)}>
+                {t('nav.activities')}
               </Link>
             </li> 
             <li>
-              <Link to="/activities/activities-details" onClick={() => setMobileToggle(false)}>
-              Activities Details
+              <Link to={getLocalizedPath('/activities/activities-details')} onClick={() => setMobileToggle(false)}>
+                {t('nav.activitiesDetails')}
               </Link>
             </li>             
             <li>
-              <Link to="/team" onClick={() => setMobileToggle(false)}>
-               Our Team
+              <Link to={getLocalizedPath('/team')} onClick={() => setMobileToggle(false)}>
+                {t('nav.ourTeam')}
               </Link>
             </li>            
             <li>
-              <Link to="/team/team-details" onClick={() => setMobileToggle(false)}>
-                Team Details
+              <Link to={getLocalizedPath('/team/team-details')} onClick={() => setMobileToggle(false)}>
+                {t('nav.teamDetails')}
               </Link>
             </li>             
             <li>
-              <Link to="/faq" onClick={() => setMobileToggle(false)}>
-              Our Faq
+              <Link to={getLocalizedPath('/faq')} onClick={() => setMobileToggle(false)}>
+                Our Faq
               </Link>
             </li>                         
           </ul>
@@ -107,35 +118,35 @@ export default function Nav({ setMobileToggle }) {
       </li>        
 
       <li className="menu-item-has-children">
-        <Link to="/blog" onClick={() => setMobileToggle(false)}>
-          Blog
+        <Link to={getLocalizedPath('/blog')} onClick={() => setMobileToggle(false)}>
+          {t('nav.blog')}
         </Link>
         <DropDown>
           <ul>
             <li>
-              <Link to="/blog" onClick={() => setMobileToggle(false)}>
-                Blog
+              <Link to={getLocalizedPath('/blog')} onClick={() => setMobileToggle(false)}>
+                {t('nav.blog')}
               </Link>
             </li>
             <li>
-              <Link to="/blog-sidebar" onClick={() => setMobileToggle(false)}>
-                Blog With Sidebar
+              <Link to={getLocalizedPath('/blog-sidebar')} onClick={() => setMobileToggle(false)}>
+                {t('nav.blogWithSidebar')}
               </Link>
             </li>                         
             <li>
               <Link
-                to="/blog/blog-details"
+                to={getLocalizedPath('/blog/blog-details')}
                 onClick={() => setMobileToggle(false)}
               >
-                Blog Details
+                {t('nav.blogDetails')}
               </Link>
             </li>
           </ul>
         </DropDown>
       </li>
       <li>
-        <Link to="/contact" onClick={() => setMobileToggle(false)}>
-          Contact
+        <Link to={getLocalizedPath('/contact')} onClick={() => setMobileToggle(false)}>
+          {t('nav.contact')}
         </Link>
       </li>
     </ul>

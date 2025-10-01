@@ -1,20 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import loadBackgroudImages from '../Common/loadBackgroudImages';
-import parse from 'html-react-parser';
 import Slider from 'react-slick';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Heroanner1 = () => {
+    const { t, locale } = useLanguage();
 
+    // Memoize heroContent to update when locale changes
+    const heroContent = useMemo(() => [
+        {img:'/assets/img/hero/01.jpg'},
+        {img:'/assets/img/hero/02.jpg'},
+        {img:'/assets/img/hero/03.jpg'},
+    ], []);
 
-    const heroContent = [
-        {img:'/assets/img/hero/01.jpg', subtitle:'Get unforgettable pleasure with us', title:'Let’s make your best <br> trip with us'},
-        {img:'/assets/img/hero/02.jpg', subtitle:'Get unforgettable pleasure with us', title:'Let’s make your best <br> trip with us'},
-        {img:'/assets/img/hero/03.jpg', subtitle:'Get unforgettable pleasure with us', title:'Let’s make your best <br> trip with us'},
-      ];
-
-      useEffect(() => {
+    useEffect(() => {
         loadBackgroudImages();
-    }, []);
+        console.log('🎨 Hero Banner - Locale:', locale);
+        console.log('🎨 Hero Banner - Translation test:', t('hero.title'));
+    }, [locale, t]);
 
     const settings = {
         dots: false,
@@ -25,7 +28,8 @@ const Heroanner1 = () => {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 4000,        
+        autoplaySpeed: 4000,
+        rtl: locale === 'ar', // Enable RTL for Arabic
         responsive: [
           {
             breakpoint: 1399,
@@ -49,10 +53,68 @@ const Heroanner1 = () => {
 
 
     return (
-        <section className="hero-section">
+        <>
+        <style>{`
+            ${locale === 'ar' ? `
+                /* RTL Styles for Arabic */
+                .hero-section[dir="rtl"] * {
+                    direction: rtl;
+                    text-align: right;
+                }
+                
+                .hero-section[dir="rtl"] .hero-content {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .sub-title,
+                .hero-section[dir="rtl"] h1 {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .booking-list-area {
+                    flex-direction: row-reverse;
+                }
+                
+                .hero-section[dir="rtl"] .booking-list {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .booking-list .content {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .booking-list h6 {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .counter-items {
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+                
+                .hero-section[dir="rtl"] .counter-text {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .counter-text p {
+                    text-align: right !important;
+                }
+                
+                .hero-section[dir="rtl"] .slick-slider,
+                .hero-section[dir="rtl"] .slick-list,
+                .hero-section[dir="rtl"] .slick-track {
+                    direction: rtl !important;
+                }
+                
+                .hero-section[dir="rtl"] .theme-btn {
+                    text-align: center;
+                }
+            ` : ''}
+        `}</style>
+        <section className="hero-section" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
         <div className="swiper hero-slider">
             <div className="swiper-wrapper">
-            <Slider {...settings}>
+            <Slider key={locale} {...settings}>
             {heroContent.map((item, i) => (
                 <div key={i} className="swiper-slide">
                     <div className="hero-1">
@@ -62,10 +124,10 @@ const Heroanner1 = () => {
                                 <div className="col-lg-10">
                                     <div className="hero-content">
                                         <div className="sub-title">
-                                        {item.subtitle}
+                                        {t('hero.subtitle')}
                                         </div>
                                         <h1>
-                                        {parse(item.title)}
+                                        {t('hero.title')}
                                         </h1>
                                         <div className="booking-list-area">
                                             <div className="booking-list">
@@ -73,7 +135,7 @@ const Heroanner1 = () => {
                                                     <img src="/assets/img/hero/icon-1.png" alt="img" />
                                                 </div>
                                                 <div className="content">
-                                                    <h6>Location</h6>
+                                                    <h6>{t('hero.location')}</h6>
                                                     <div className="form">
                                                         <select className="single-select w-100">
                                                             <option>Australia</option>
@@ -89,10 +151,10 @@ const Heroanner1 = () => {
                                                     <img src="/assets/img/hero/icon-2.png" alt="img" />
                                                 </div>
                                                 <div className="content">
-                                                    <h6>Activities Type</h6>
+                                                    <h6>{t('hero.activitiesType')}</h6>
                                                     <div className="form">
                                                         <select className="single-select w-100">
-                                                            <option> Activities Type</option>
+                                                            <option>{t('hero.activitiesType')}</option>
                                                             <option> Adventure 02</option>
                                                             <option>Adventure 03</option>
                                                             <option> Adventure 04</option>
@@ -105,7 +167,7 @@ const Heroanner1 = () => {
                                                     <img src="/assets/img/hero/icon-3.png" alt="img" />
                                                 </div>
                                                 <div className="content">
-                                                    <h6>Activate Day</h6>
+                                                    <h6>{t('hero.activateDay')}</h6>
                                                     <div className="form-clt">
                                                         <input type="date" id="date1" name="date1" />
                                                     </div>
@@ -116,7 +178,7 @@ const Heroanner1 = () => {
                                                     <img src="/assets/img/hero/icon-3.png" alt="img" />
                                                 </div>
                                                 <div className="content">
-                                                    <h6>Traveler</h6>
+                                                    <h6>{t('hero.traveler')}</h6>
                                                     <div className="form">
                                                         <select className="single-select w-100">
                                                             <option>01</option>
@@ -127,22 +189,22 @@ const Heroanner1 = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button className="theme-btn" type="submit">Search</button>
+                                            <button className="theme-btn" type="submit">{t('common.search')}</button>
                                         </div>
                                     </div>
                                     <div className="counter-area">
                                         <div className="counter-items">
                                             <div className="counter-text">
                                                 <h2><span className="count">20.5</span>k</h2>
-                                                <p>Featured Projects</p>
+                                                <p>{t('hero.featuredProjects')}</p>
                                             </div>
                                             <div className="counter-text">
                                                 <h2><span className="count">100.5</span>k</h2>
-                                                <p>Luxury Houses</p>
+                                                <p>{t('hero.luxuryHouses')}</p>
                                             </div>
                                             <div className="counter-text">
                                                 <h2><span className="count">150.5</span>k</h2>
-                                                <p>Satisficed Clients</p>
+                                                <p>{t('hero.satisfiedClients')}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -157,6 +219,7 @@ const Heroanner1 = () => {
             </div>
         </div>
     </section>
+    </>
     );
 };
 
