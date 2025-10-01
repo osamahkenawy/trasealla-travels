@@ -22,6 +22,16 @@ import BlogSidebarPage from "../Pages/BlogSidebarPage";
 export const router = createBrowserRouter([
     {
       path: "/",
+      Component: Main,
+      children: [
+        {
+          index: true,
+          Component: Home3,
+        },                           
+      ],
+    },
+    {
+      path: "/",
       Component: Layout3,
       children: [                      
         {
@@ -85,22 +95,12 @@ export const router = createBrowserRouter([
       ],
     },
     {
-      path: '/',
+      path: '/home1',
       Component: Layout2,
       children: [
         {
           index: true,
           Component: Home,
-        },                           
-      ],
-    },     
-    {
-      path: 'home3',
-      Component: Main,
-      children: [
-        {
-          index: true,
-          Component: Home3,
         },                           
       ],
     },      
