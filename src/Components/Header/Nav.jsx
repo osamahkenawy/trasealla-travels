@@ -15,28 +15,7 @@ export default function Nav({ setMobileToggle }) {
 
   return (
     <ul className="cs_nav_list fw-medium">
-      <li className="menu-item-has-children">
-        <Link to={getLocalizedPath('/')}>{t('nav.home')}</Link>
-        <DropDown>
-          <ul>
-            <li>
-              <Link to={getLocalizedPath('/home1')} onClick={() => setMobileToggle(false)}>
-                {t('nav.homeVersion1')}
-              </Link>
-            </li>
-            <li>
-              <Link to={getLocalizedPath('/home2')} onClick={() => setMobileToggle(false)}>
-                {t('nav.homeVersion2')}
-              </Link>
-            </li>
-            <li>
-              <Link to={getLocalizedPath('/')} onClick={() => setMobileToggle(false)}>
-                {t('nav.homeVersion3')}
-              </Link>
-            </li>            
-          </ul>
-        </DropDown>
-      </li>
+      
 
       <li>
         <Link to={getLocalizedPath('/about')} onClick={() => setMobileToggle(false)}>
