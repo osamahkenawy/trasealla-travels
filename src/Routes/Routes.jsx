@@ -18,6 +18,9 @@ import ContactPage from "../Pages/ContactPage";
 import BlogGrid from "../Pages/BlogGrid";
 import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import BlogSidebarPage from "../Pages/BlogSidebarPage";
+import LoginPage from "../Pages/LoginPage";
+import RegisterPage from "../Pages/RegisterPage";
+import ForgotPasswordPage from "../Pages/ForgotPasswordPage";
 import { LanguageProvider } from "../contexts/LanguageContext";
 
 // Wrapper component to provide language context
@@ -158,6 +161,33 @@ const pageRoutes = [
       {
         index: true,
         Component: Home,
+      },
+    ],
+  },
+  {
+    path: "login",
+    children: [
+      {
+        index: true,
+        Component: LoginPage,
+      },
+    ],
+  },
+  {
+    path: "register",
+    children: [
+      {
+        index: true,
+        Component: RegisterPage,
+      },
+    ],
+  },
+  {
+    path: "forgot-password",
+    children: [
+      {
+        index: true,
+        Component: ForgotPasswordPage,
       },
     ],
   },
