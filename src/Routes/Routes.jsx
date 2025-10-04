@@ -21,7 +21,10 @@ import BlogSidebarPage from "../Pages/BlogSidebarPage";
 import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import ForgotPasswordPage from "../Pages/ForgotPasswordPage";
+import AdminDashboard from "../Pages/AdminDashboard";
+import AdminIndex from "../Pages/AdminIndex";
 import { LanguageProvider } from "../contexts/LanguageContext";
+import { LayoutProvider } from "../contexts/useLayoutContext";
 
 // Wrapper component to provide language context
 function LanguageWrapper() {
@@ -29,6 +32,15 @@ function LanguageWrapper() {
     <LanguageProvider>
       <Outlet />
     </LanguageProvider>
+  );
+}
+
+// Wrapper component for admin routes with LayoutProvider
+function AdminWrapper() {
+  return (
+    <LayoutProvider>
+      <Outlet />
+    </LayoutProvider>
   );
 }
 
@@ -188,6 +200,21 @@ const pageRoutes = [
       {
         index: true,
         Component: ForgotPasswordPage,
+      },
+    ],
+  },
+  // Admin routes
+  {
+    path: "admin",
+    Component: AdminWrapper,
+    children: [
+      {
+        index: true,
+        Component: AdminIndex,
+      },
+      {
+        path: "dashboard",
+        Component: AdminDashboard,
       },
     ],
   },

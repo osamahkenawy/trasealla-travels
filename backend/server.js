@@ -45,8 +45,8 @@ app.use('/api/', limiter);
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? ['https://yourdomain.com'] 
-    : ['http://localhost:3000', 'http://localhost:5173'],
-  credentials: true
+    : '*', // Allow all origins in development
+  credentials: process.env.NODE_ENV === 'production' ? true : false
 }));
 
 // Body parsing middleware
