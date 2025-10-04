@@ -23,6 +23,15 @@ import RegisterPage from "../Pages/RegisterPage";
 import ForgotPasswordPage from "../Pages/ForgotPasswordPage";
 import AdminDashboard from "../Pages/AdminDashboard";
 import AdminIndex from "../Pages/AdminIndex";
+import ChartsPage from "../Pages/Admin/ChartsPage";
+import TablesBasicPage from "../Pages/Admin/TablesBasicPage";
+import TablesDataPage from "../Pages/Admin/TablesDataPage";
+import FormsBasicPage from "../Pages/Admin/FormsBasicPage";
+import UIButtonsPage from "../Pages/Admin/UIButtonsPage";
+import UICardsPage from "../Pages/Admin/UICardsPage";
+import UIModalsPage from "../Pages/Admin/UIModalsPage";
+import UIAlertsPage from "../Pages/Admin/UIAlertsPage";
+import UIDropdownsPage from "../Pages/Admin/UIDropdownsPage";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { LayoutProvider } from "../contexts/useLayoutContext";
 
@@ -215,6 +224,74 @@ const pageRoutes = [
       {
         path: "dashboard",
         Component: AdminDashboard,
+      },
+      {
+        path: "charts",
+        Component: ChartsPage,
+      },
+      {
+        path: "tables/basic",
+        Component: TablesBasicPage,
+      },
+      {
+        path: "tables/data",
+        Component: TablesDataPage,
+      },
+      {
+        path: "forms/basic",
+        Component: FormsBasicPage,
+      },
+      {
+        path: "ui/buttons",
+        Component: UIButtonsPage,
+      },
+      {
+        path: "ui/cards",
+        Component: UICardsPage,
+      },
+      {
+        path: "ui/modals",
+        Component: UIModalsPage,
+      },
+      {
+        path: "ui/alerts",
+        Component: UIAlertsPage,
+      },
+      {
+        path: "ui/dropdowns",
+        Component: UIDropdownsPage,
+      },
+      {
+        path: "icons/solar",
+        Component: UICardsPage, // Placeholder
+      },
+      {
+        path: "icons/boxicons",
+        Component: UICardsPage, // Placeholder
+      },
+      {
+        path: "maps/google",
+        Component: UICardsPage, // Placeholder
+      },
+      {
+        path: "maps/vector",
+        Component: UICardsPage, // Placeholder
+      },
+      {
+        path: "tours",
+        Component: AdminDashboard, // Reuse dashboard for now
+      },
+      {
+        path: "destinations",
+        Component: AdminDashboard, // Reuse dashboard for now
+      },
+      {
+        path: "bookings",
+        Component: AdminDashboard, // Reuse dashboard for now
+      },
+      {
+        path: "users",
+        Component: AdminDashboard, // Reuse dashboard for now
       },
     ],
   },

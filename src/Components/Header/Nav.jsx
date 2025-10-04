@@ -129,9 +129,9 @@ export default function Nav({ setMobileToggle }) {
         </Link>
       </li>
       <li>
-        <Link to="/admin" onClick={() => setMobileToggle(false)} className="text-warning">
+        {/* <Link to="/admin" onClick={() => setMobileToggle(false)} className="text-warning">
           Admin Dashboard
-        </Link>
+        </Link> */}
       </li>
     </ul>
   );

@@ -1,10 +1,10 @@
-import avatar1 from '@/assets/images/users/avatar-1.jpg';
-import avatar2 from '@/assets/images/users/avatar-2.jpg';
-import avatar3 from '@/assets/images/users/avatar-3.jpg';
-import avatar4 from '@/assets/images/users/avatar-4.jpg';
-import avatar5 from '@/assets/images/users/avatar-5.jpg';
-import avatar6 from '@/assets/images/users/avatar-6.jpg';
-import avatar7 from '@/assets/images/users/avatar-7.jpg';
+const avatar1 = '/assets/admin/users/avatar-1.jpg';
+const avatar2 = '/assets/admin/users/avatar-2.jpg';
+const avatar3 = '/assets/admin/users/avatar-3.jpg';
+const avatar4 = '/assets/admin/users/avatar-4.jpg';
+const avatar5 = '/assets/admin/users/avatar-5.jpg';
+const avatar6 = '/assets/admin/users/avatar-6.jpg';
+const avatar7 = '/assets/admin/users/avatar-7.jpg';
 // export const timelineData: TimelineType = {
 //   Today: [
 //     {
