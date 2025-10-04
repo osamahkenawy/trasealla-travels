@@ -50,84 +50,49 @@ export default function Header2({ variant }) {
     >
       <div className="cs_main_header">
         <div className="container-fluid"> 
-          <div className="cs_main_header_in">
-            {/* Swap left and right sections for RTL */}
-            {locale === 'ar' ? (
-              <>
-                {/* Header buttons on the left for RTL */}
-                <div className="cs_main_header_left">
-                  <div className="header-btn d-flex align-items-center">
-                    <div className="main-button header-btn-1">
-                      <LanguageSwitcher />
-                      <Link to={getLocalizedPath('/contact')} className='theme-btn'>
-                        <span> Request A Quote <i className="bi bi-arrow-right"></i></span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                {/* Navigation in center */}
-                <div className="cs_main_header_center">
-                  <div className="cs_nav cs_primary_font fw-medium">
-                    <span
-                      className={
-                        mobileToggle
-                          ? 'cs-munu_toggle cs_teggle_active'
-                          : 'cs-munu_toggle'
-                      }
-                      onClick={() => setMobileToggle(!mobileToggle)}
-                    >
-                      <span></span>
-                    </span>
-                    <Nav setMobileToggle={setMobileToggle} />
-                  </div>
-                </div>
-                {/* Logo on the right for RTL */}
-                <div className="cs_main_header_right">
-                  <Link className="cs_site_branding" to={getLocalizedPath('/')}>
-                    <img src="/assets/img/logo/2.png" alt="Logo" />
+          <div className="cs_main_header_in" style={{ 
+            display: 'flex', 
+            alignItems: 'center',
+            flexDirection: locale === 'ar' ? 'row-reverse' : 'row' 
+          }}>
+            {/* Logo - will be at start of row (left in LTR, right in RTL) */}
+            <div className="cs_main_header_left">
+              <Link className="cs_site_branding" to={getLocalizedPath('/')}>
+                <img src="/assets/img/logo/trasealla-logo/trasealla-white-small.png" alt="Logo" />
+              </Link>
+            </div>
+            
+            {/* Navigation in center */}
+            <div className="cs_main_header_center" style={{ flex: 1 }}>
+              <div className="cs_nav cs_primary_font fw-medium">
+                <span
+                  className={
+                    mobileToggle
+                      ? 'cs-munu_toggle cs_teggle_active'
+                      : 'cs-munu_toggle'
+                  }
+                  onClick={() => setMobileToggle(!mobileToggle)}
+                >
+                  <span></span>
+                </span>
+                <Nav setMobileToggle={setMobileToggle} />
+              </div>
+            </div>
+            
+            {/* Header buttons - will be at end of row (right in LTR, left in RTL) */}
+            <div className="cs_main_header_right">
+              <div className="header-btn d-flex align-items-center">
+                <div className="main-button header-btn-1">
+                  <a onClick={() => setSearchToggle(!searchToggle)} className="search-trigger search-icon">
+                    <i className="bi bi-search"></i>
+                  </a>
+                  <LanguageSwitcher />
+                  <Link to={getLocalizedPath('/contact')} className='theme-btn'>
+                    <span> Request A Quote <i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
-              </>
-            ) : (
-              <>
-                {/* Logo on the left for LTR */}
-                <div className="cs_main_header_left">
-                  <Link className="cs_site_branding" to={getLocalizedPath('/')}>
-                    <img src="/assets/img/logo/2.png" alt="Logo" />
-                  </Link>
-                </div>
-                {/* Navigation in center */}
-                <div className="cs_main_header_center">
-                  <div className="cs_nav cs_primary_font fw-medium">
-                    <span
-                      className={
-                        mobileToggle
-                          ? 'cs-munu_toggle cs_teggle_active'
-                          : 'cs-munu_toggle'
-                      }
-                      onClick={() => setMobileToggle(!mobileToggle)}
-                    >
-                      <span></span>
-                    </span>
-                    <Nav setMobileToggle={setMobileToggle} />
-                  </div>
-                </div>
-                {/* Header buttons on the right for LTR */}
-                <div className="cs_main_header_right">
-                  <div className="header-btn d-flex align-items-center">
-                    <div className="main-button header-btn-1">
-                      <a onClick={() => setSearchToggle(!searchToggle)} className="search-trigger search-icon">
-                        <i className="bi bi-search"></i>
-                      </a>
-                      <LanguageSwitcher />
-                      <Link to={getLocalizedPath('/contact')} className='theme-btn'>
-                        <span> Request A Quote <i className="bi bi-arrow-right"></i></span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
