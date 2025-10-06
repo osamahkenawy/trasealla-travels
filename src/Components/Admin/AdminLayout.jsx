@@ -7,11 +7,11 @@ import '../../assets/admin.scss'; // Import admin styles
 
 const AdminLayout = ({ children }) => {
   return (
-    <div className="wrapper">
+    <div className="wrapper" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <TopNavigationBar />
       <VerticalNavigationBar />
-      <div className="page-content">
-        <Container fluid>
+      <div className="page-content" style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Container fluid style={{ flex: 1 }}>
           {children}
         </Container>
         <Footer />
