@@ -11,11 +11,18 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Configuration - Update these variables as needed
-SERVER_HOST="your-server-host"
+# Configuration - Server details
+SERVER_HOST="72.61.177.109"
 SERVER_USER="root"
 SERVER_PATH="/var/www/trasealla/frontend-landing-page"
 LOCAL_BUILD_DIR="./dist"
+
+# Function to prompt for password securely
+prompt_password() {
+    echo -n "Enter server password for $SERVER_USER@$SERVER_HOST: "
+    read -s SERVER_PASSWORD
+    echo
+}
 
 echo -e "${GREEN}🚀 Starting Trasealla Landing Page Deployment...${NC}"
 
@@ -27,7 +34,7 @@ fi
 
 # Install dependencies if needed
 echo -e "${YELLOW}📦 Installing dependencies...${NC}"
-npm install
+npm install --legacy-peer-deps
 
 # Build the project
 echo -e "${YELLOW}🔨 Building project for production...${NC}"
@@ -41,34 +48,56 @@ fi
 
 echo -e "${GREEN}✅ Build completed successfully!${NC}"
 
-# Deploy to server (uncomment and configure the following lines for actual deployment)
-# echo -e "${YELLOW}🚀 Deploying to server...${NC}"
-# 
-# # Create remote directory if it doesn't exist
-# ssh $SERVER_USER@$SERVER_HOST "mkdir -p $SERVER_PATH"
-# 
-# # Sync files to server (rsync for efficient transfer)
-# rsync -avz --delete \
-#     --exclude='.git' \
-#     --exclude='node_modules' \
-#     --exclude='src' \
-#     --exclude='public' \
-#     "$LOCAL_BUILD_DIR/" \
-#     "$SERVER_USER@$SERVER_HOST:$SERVER_PATH/"
+# Deploy to server
+echo -e "${YELLOW}🚀 Deploying to server...${NC}"
 
-# For manual deployment, provide instructions
-echo -e "${GREEN}✅ Build completed! Ready for deployment.${NC}"
-echo ""
-echo -e "${YELLOW}📋 Manual Deployment Steps:${NC}"
-echo "1. Copy the contents of the '$LOCAL_BUILD_DIR' folder"
-echo "2. Upload/transfer these files to: $SERVER_PATH"
-echo "3. Ensure your web server is configured to serve files from this directory"
-echo ""
-echo -e "${YELLOW}🔧 Server Commands (run on your server):${NC}"
-echo "   mkdir -p $SERVER_PATH"
-echo "   # Then copy your dist/ contents to $SERVER_PATH"
-echo ""
-echo -e "${GREEN}🎉 Deployment preparation complete!${NC}"
+# Check if sshpass is available for password authentication
+if command -v sshpass &> /dev/null; then
+    echo -e "${YELLOW}📝 Using sshpass for password authentication...${NC}"
+    prompt_password
+    
+    # Create remote directory if it doesn't exist
+    sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "mkdir -p $SERVER_PATH"
+    
+    # Sync files to server using sshpass
+    sshpass -p "$SERVER_PASSWORD" rsync -avz --delete \
+        -e "ssh -o StrictHostKeyChecking=no" \
+        "$LOCAL_BUILD_DIR/" \
+        "$SERVER_USER@$SERVER_HOST:$SERVER_PATH/"
+else
+    echo -e "${YELLOW}📝 sshpass not found. You'll need to enter the password manually...${NC}"
+    echo -e "${YELLOW}💡 To install sshpass: brew install hudochenkov/sshpass/sshpass (macOS) or apt-get install sshpass (Ubuntu)${NC}"
+    echo ""
+    
+    # Create remote directory if it doesn't exist
+    ssh $SERVER_USER@$SERVER_HOST "mkdir -p $SERVER_PATH"
+    
+    # Sync files to server (will prompt for password)
+    rsync -avz --delete \
+        "$LOCAL_BUILD_DIR/" \
+        "$SERVER_USER@$SERVER_HOST:$SERVER_PATH/"
+fi
+
+# Set proper permissions on server
+echo -e "${YELLOW}🔧 Setting server permissions...${NC}"
+if command -v sshpass &> /dev/null && [ ! -z "$SERVER_PASSWORD" ]; then
+    sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
+        cd $SERVER_PATH && 
+        chown -R www-data:www-data . && 
+        find . -type d -exec chmod 755 {} \; && 
+        find . -type f -exec chmod 644 {} \;
+    "
+else
+    ssh $SERVER_USER@$SERVER_HOST "
+        cd $SERVER_PATH && 
+        chown -R www-data:www-data . && 
+        find . -type d -exec chmod 755 {} \; && 
+        find . -type f -exec chmod 644 {} \;
+    "
+fi
+
+echo -e "${GREEN}🎉 Deployment to $SERVER_HOST completed successfully!${NC}"
+echo -e "${YELLOW}📍 Files deployed to: $SERVER_PATH${NC}"
 
 # Optional: Open build directory in file manager (macOS)
 if command -v open &> /dev/null && [[ "$OSTYPE" == "darwin"* ]]; then

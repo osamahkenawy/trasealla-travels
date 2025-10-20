@@ -89,6 +89,9 @@ temp/
 # Admin source (if separate project)
 admin_src/
 
+# Deployment scripts
+/deploy.sh
+
 # Package manager lock files (keep one)
 # package-lock.json
 # yarn.lock
