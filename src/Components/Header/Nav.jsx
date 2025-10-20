@@ -128,11 +128,6 @@ export default function Nav({ setMobileToggle }) {
           {t('nav.contact')}
         </Link>
       </li>
-      <li>
-        {/* <Link to="/admin" onClick={() => setMobileToggle(false)} className="text-warning">
-          Admin Dashboard
-        </Link> */}
-      </li>
     </ul>
   );
 }

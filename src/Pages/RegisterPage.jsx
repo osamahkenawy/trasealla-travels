@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Carousel, Alert, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
+import { buildApiUrl, API_CONFIG } from '../config/api';
 import '../assets/login.css';
 
 const RegisterPage = () => {
@@ -104,7 +105,7 @@ const RegisterPage = () => {
     setAlertMessage(null);
 
     try {
-      const response = await fetch('http://localhost:5001/api/auth/register', {
+      const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.AUTH.REGISTER), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -128,12 +129,12 @@ const RegisterPage = () => {
         // Show success message
         setAlertMessage({
           type: 'success',
-          message: 'Registration successful! Redirecting to login...'
+          message: 'Registration successful! Redirecting to homepage...'
         });
 
-        // Redirect to login after 2 seconds
+        // Redirect to home after 2 seconds
         setTimeout(() => {
-          navigate('/login');
+          navigate('/');
         }, 2000);
       } else {
         setAlertMessage({
@@ -153,8 +154,8 @@ const RegisterPage = () => {
     }
   };
 
-  const handleLoginRedirect = () => {
-    navigate('/login');
+  const handleHomeRedirect = () => {
+    navigate('/');
   };
 
   const carouselItems = [
@@ -477,10 +478,10 @@ const RegisterPage = () => {
                   <Button 
                     variant="link" 
                     className="register-link"
-                    onClick={handleLoginRedirect}
+                    onClick={handleHomeRedirect}
                     disabled={loading}
                   >
-                    Sign In
+                    Go to Home
                   </Button>
                 </div>
               </Form>
