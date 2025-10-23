@@ -54,11 +54,11 @@ export default function Header3({ variant }) {
             <ul className="cs_header_contact_list cs_mp_0 cs_white_color">
                 <li>
                 <i className="bi bi-envelope-fill"></i>
-                  <a href="mailto:demo@example.com" aria-label="Email link">demo@example.com</a>
+                  <a href="mailto:info@trasealla.com" aria-label="Email link">info@trasealla.com</a>
                 </li>
                 <li>
                 <i className="bi bi-telephone-fill"></i>
-                  <a href="tel:+990123456789" aria-label="Phone call link">+990 123 456 789</a>
+                  <a href="tel:+990123456789" aria-label="Phone call link">+971522200730</a>
                 </li>
                 <li>
                 <i className="bi bi-geo-alt-fill"></i>
